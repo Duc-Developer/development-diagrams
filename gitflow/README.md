@@ -27,7 +27,6 @@ The general git-flow follows below:
 %%{init: { 'logLevel': 'debug', 'theme': 'base', 'gitGraph': {'showBranches': true, 'showCommitLabel':true,'mainBranchName': 'production'}} }%%
       gitGraph
         commit
-        branch hotfix
         branch Staging/UAT
         branch Test/QA
         branch main
@@ -76,6 +75,8 @@ The general git-flow follows below:
         merge main tag:"Perf v1.0.2"
         checkout production
         merge main tag:"product v1.0.2"
+        checkout production
+        branch hotfix
         checkout hotfix
         commit
         checkout Staging/UAT
