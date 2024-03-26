@@ -12,3 +12,7 @@ I just wanted to make a video to give people who work solo or or on a smaller pr
 ### How do you handle developer conflicts?
 
 See it [here](https://github.com/Duc-Developer/development-diagrams/blob/master/conflicts/README.md)
+
+### How to integrate Git Flow in your team?
+
+See it [here](https://github.com/Duc-Developer/development-diagrams/blob/master/gitflow/README.md)
