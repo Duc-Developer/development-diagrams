@@ -40,20 +40,11 @@ The general git-flow follows below:
         commit type: HIGHLIGHT
         checkout featureA
         commit
-        commit
         checkout featureB
         commit
         commit
         checkout develop
         merge featureA
-        merge featureB
-        checkout featureA
-        commit
-        checkout develop
-        merge featureA
-        checkout featureB
-        commit
-        checkout develop
         merge featureB
         branch release
         checkout release
@@ -63,7 +54,38 @@ The general git-flow follows below:
         checkout develop
         merge release
         checkout Test/QA
-        merge main  tag:"RT v1.0.1"
+        merge main tag:"RT v1.0.1"
+        checkout featureA
+        commit
+        commit
+        commit
+        checkout featureB
+        commit
+        checkout develop
+        merge featureA
+        merge featureB
+        checkout release
+        commit tag:"v1.0.2"
+        checkout main
+        merge release
+        checkout develop
+        merge release
+        checkout Test/QA
+        merge main tag:"RT v1.0.2"
+        checkout Staging/UAT
+        merge main tag:"Perf v1.0.2"
+        checkout production
+        merge main tag:"product v1.0.2"
+        checkout hotfix
+        commit
+        checkout Staging/UAT
+        merge hotfix
+        checkout production
+        merge hotfix tag:"hotfix production information"
+        checkout main
+        merge production
+        checkout develop
+        merge main
 ```
 
 * develop branch is created from the main;
