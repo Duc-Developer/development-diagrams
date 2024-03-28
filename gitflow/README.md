@@ -27,6 +27,7 @@ The general git-flow follows below:
 %%{init: { 'logLevel': 'debug', 'theme': 'base', 'gitGraph': {'showBranches': true, 'showCommitLabel':true,'mainBranchName': 'main'}} }%%
       gitGraph
         commit tag:"v0.0.1"
+        branch release
         branch develop
         branch featureA
         branch featureB
@@ -40,21 +41,16 @@ The general git-flow follows below:
         merge featureA
         merge featureB
         commit id:"Merge featAB"
-        branch release
         checkout release
-        commit id:"fix: api error #123"
         cherry-pick id:"Merge featAB"
+        commit id:"fix: api error #123"
+        commit
         checkout develop
         merge release
         commit
         commit
         checkout main
         merge release
-        commit
-        checkout featureA
-        commit
-        checkout featureB
-        commit
 ```
 
 ```mermaid
