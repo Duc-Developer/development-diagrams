@@ -39,15 +39,21 @@ The general git-flow follows below:
         commit type: HIGHLIGHT
         merge featureA
         merge featureB
+        commit id:"Merge featAB"
         branch release
         checkout release
-        commit "fix: api error #123"
-        commit
+        commit id:"fix: api error #123"
+        cherry-pick id:"Merge featAB"
         checkout develop
         merge release
+        commit
+        commit
         checkout main
         merge release
         commit
+        checkout featureA
+        commit
+        checkout featureB
         commit
 ```
 
