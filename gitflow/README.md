@@ -24,6 +24,34 @@ The hotfix branch is for solving errors occurred in production, it is created di
 The general git-flow follows below:
 
 ```mermaid
+%%{init: { 'logLevel': 'debug', 'theme': 'base', 'gitGraph': {'showBranches': true, 'showCommitLabel':true,'mainBranchName': 'main'}} }%%
+      gitGraph
+        commit tag:"v0.0.1"
+        branch develop
+        branch featureA
+        branch featureB
+        checkout featureA
+        commit
+        checkout featureB
+        commit
+        commit
+        checkout develop
+        commit type: HIGHLIGHT
+        merge featureA
+        merge featureB
+        branch release
+        checkout release
+        commit "fix: api error #123"
+        commit
+        checkout develop
+        merge release
+        checkout main
+        merge release
+        commit
+        commit
+```
+
+```mermaid
 %%{init: { 'logLevel': 'debug', 'theme': 'base', 'gitGraph': {'showBranches': true, 'showCommitLabel':true,'mainBranchName': 'production'}} }%%
       gitGraph
         commit
