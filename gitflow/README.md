@@ -50,7 +50,7 @@ The general git-flow follows below:
         commit
         commit
         checkout main
-        merge release
+        merge release tag:"v0.0.2"
 ```
 
 * develop branch is created from the main;
